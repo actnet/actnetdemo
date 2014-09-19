@@ -31,5 +31,31 @@ System applications can be illustrated in this combined Screenshot from real onl
 ####Acknowlegement
 The system was developed by Tsinghua University Knowledge Engineering Group (KEG), sponsored by Huawei Technologies Co., Ltd.
 
+####Some API in Activity Search
+ActivitySearchByName (const string& input, string& output):
+Input: activity name
+Output: the most similar activity in saedb
 
+ActivitySearchSimilar(const string& input, string& output):
+Input: activity name, result size
+Output: the most similar n(n is result size) activities in saedb
 
+ListSearchByActivity(const string& input, string& output):
+Input: activity name
+Output: all activities’s name in activity cluster
+
+CenterSearchByActivity(const string& input, string& output ):
+Input: activity name
+Output: activity cluster’s center activity
+
+ActivitySearchCity(const string& input, string& output):
+Input: latitude, longtitude, result size
+Output: the most popular n(n is result size) activities in the scope of the latitude and longitude
+
+ActivitySearchUser(const string& input, string& output)
+Input: activity name
+Output: users’ Id who participated in that activity
+
+WeiboSearchByActivity(const string& input, string& output):
+Input: activity name
+Output: weibo instance of that activity
