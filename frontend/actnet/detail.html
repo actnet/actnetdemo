@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/css/activity_in.css">
+    <link rel="stylesheet" type="text/css" href="/css/activity.css">
+    <link rel="stylesheet" type="text/css" href="/css/nv.d3.css">
+    <script type="text/javascript" src="/rgraph/libraries/RGraph.common.core.js"></script>
+    <script type="text/javascript" src="/rgraph/libraries/RGraph.common.effects.js"></script>
+    <script type="text/javascript" src="/rgraph/libraries/RGraph.rose.js"></script>
+    <script type="text/javascript" src="/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GWIXNVecz23sB8y2EW1n5L4I"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/Heatmap/2.0/src/Heatmap_min.js"></script>
+    <script type="text/javascript" src="/js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/js/nv.d3.min.js"></script>
+    <script type="text/javascript" src="/js/actnet.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/js/search.js" charset="UTF-8"></script>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="nav">
+                <div class="home">
+                    <a href="/home.html"><img src="/images/logo.png"></a>
+                    <span>Activity <a class="c">N</a>et</span>
+                </div>
+		        <div class="search-box">
+                    <form method="get" id="search">
+                        <input type="text" placeholder="要搜索的活动……" id="input-box">
+                        <input type="submit" id="search-button" value="">
+                    </form>
+                </div>
+                <div class="util_button">
+                    <input type="button" value="团队" onclick="location.href='../about.html';">
+                    <input type="button" value="帮助" onclick="location.href='../help.html';">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="main-sec">
+        <div class="map">
+            <div class="side-bar">
+                <div class="left-side-bar">
+                    <ul>
+                        <li><input type="button" id="sent-trig" value="情感图"></li>
+                        <li><input type="button" id="heat-trig" value="热力图"></li>
+                    </ul>
+                </div>
+                <div class="right-side-bar">
+                    <input type="button" class="head" value="相关活动"/>
+                    <ul id="ul-right-side-bar">
+                    </ul>
+                </div>
+            </div>
+            <div class="center-map">
+                <div id="container" class="center-map-inner"></div>
+            </div>
+            <!--<div class="shadow"><img src="images/shadow.png" alt=""/></div>-->
+        </div>
+    </section>
+    <section class="bottom-sec">
+        <div class="fixed-bottom">
+            <div id="bottom-sec-div">
+                <div id="chart-poi-div">
+                    <svg id="chart-poi"></svg>
+                    <span id="poi-title">地点分布</span>
+                    <div id="poi-full"><img src="/images/full-screen-icon.png" alt=""/></div>
+                </div>
+                <div id="chart-hour-div">
+                    <canvas id="cvs" width=540px height=294px>[No canvas support]</canvas>
+                    <span id="hour-title">时间分布</span>
+                    <div id="hour-full"><img src="/images/full-screen-icon.png" alt=""/></div></div>
+                <div id="sub-acts">
+                    <div class="related-user-title"><span>情感分析</span></div>
+                    <div class="users-box-div" id="users-box-div">
+                        <ul id="sub-acts-box-ul">
+                            <li>
+                                <div class="next-act-info">
+                                    <span class="sub-act-name"><a href="">-</a></span>
+                                    <div class="next-act-info-det">
+                                        <span class="pos-percent">-</span>
+                                        <img src="/images/happy.png" alt="" class="emoji-icon"/>
+                                        <span class="big-slash">/</span>
+                                        <span class="neg-percent">-</span>
+                                        <img src="/images/angry.png" alt="" class="emoji-icon"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="next-act-info">
+                                    <span class="sub-act-name"><a href="">-</a></span>
+                                    <div class="next-act-info-det">
+                                        <span class="pos-percent">-</span>
+                                        <img src="/images/happy.png" alt="" class="emoji-icon"/>
+                                        <span class="big-slash">/</span>
+                                        <span class="neg-percent">-</span>
+                                        <img src="/images/angry.png" alt="" class="emoji-icon"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="next-act-info">
+                                    <span class="sub-act-name"><a href="">-</a></span>
+                                    <div class="next-act-info-det">
+                                        <span class="pos-percent">-</span>
+                                        <img src="/images/happy.png" alt="" class="emoji-icon"/>
+                                        <span class="big-slash">/</span>
+                                        <span class="neg-percent">-</span>
+                                        <img src="/images/angry.png" alt="" class="emoji-icon"/>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul id="sub-acts-box-ul-right">
+                            <li>
+                                <div class="next-act-info">
+                                    <span class="sub-act-name"><a href="">-</a></span>
+                                    <div class="next-act-info-det">
+                                        <span class="pos-percent">-</span>
+                                        <img src="/images/happy.png" alt="" class="emoji-icon"/>
+                                        <span class="big-slash">/</span>
+                                        <span class="neg-percent">-</span>
+                                        <img src="/images/angry.png" alt="" class="emoji-icon"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="next-act-info">
+                                    <span class="sub-act-name"><a href="">-</a></span>
+                                    <div class="next-act-info-det">
+                                        <span class="pos-percent">-</span>
+                                        <img src="/images/happy.png" alt="" class="emoji-icon"/>
+                                        <span class="big-slash">/</span>
+                                        <span class="neg-percent">-</span>
+                                        <img src="/images/angry.png" alt="" class="emoji-icon"/>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="next-act-info">
+                                    <span class="sub-act-name"><a href="">-</a></span>
+                                    <div class="next-act-info-det">
+                                        <span class="pos-percent">-</span>
+                                        <img src="/images/happy.png" alt="" class="emoji-icon"/>
+                                        <span class="big-slash">/</span>
+                                        <span class="neg-percent">-</span>
+                                        <img src="/images/angry.png" alt="" class="emoji-icon"/>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div></div>
+                <div id="related-user">
+                    <div class="related-user-title"><span>相关用户</span></div>
+                    <div class="users-box-div">
+                        <ul id="related-user-ul">
+                        </ul>
+                        <ul id="related-user-ul-right">
+                        </ul>
+                    </div>
+                </div>
+                <div id="next-act">
+                    <div class="next-act-title"><span>下一个活动</span></div>
+                    <div class="next-act-box-div">
+                        <ul id="next-act-ul">
+                        </ul>
+                        <ul id="next-act-ul-right">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right-arrow" id="right-arrow"><img src="/images/right-arrow.png" alt=""/></div>
+            <div class="left-arrow" id="left-arrow"><img src="/images/left-arrow.png" alt=""/></div>
+        </div>
+    </section>
+    <section id="full">
+        <div class="ind"></div>
+        <div class="render-box" id="render-box">
+            <div id="cross"><img src="/images/cross.png" alt=""/></div>
+            <svg id="chart-poi-l"></svg>
+            <canvas id="cvs-l" width=971px height=494px>[No canvas support]</canvas>
+        </div>
+    </section>
+    <footer>
+        <span>Copyright © 2006-2014 KEG, Tsinghua. All Rights Reserved. ICP NUM. 9068414</span>
+    </footer>
+    <script type="text/javascript">
+        var path = window.location.href;
+        var matches = /\/activity\/(.*)/.exec(path);
+        if(matches)
+            initialize(matches[1]);
+        else
+            initialize('吃烤鸭');
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#render-box').css("width", window.innerWidth * 0.74 + "px");
+            $('#render-box').css("height", window.innerHeight * 0.66 + "px");
+            document.getElementById('cvs-l').width = window.innerWidth * 0.72;
+            document.getElementById('cvs-l').height = window.innerHeight * 0.64;
+
+            hideBigPics();
+
+            $("#sent-trig").click(function() {
+                clearOverlays();
+                renderSentMap(map, emotionData['result']);
+            });
+            $("#heat-trig").click(function() {
+                clearOverlays();
+                renderHeatMap(map, emotionData['result']);
+            });
+            $("#search").submit(function(e) {
+                var key = $("#search-box").val();
+                if (key) {
+                    window.location.replace("/activity/" + key);
+                }
+                return false;
+            });
+            bmargin = 0;
+            $("#right-arrow").click(function() {
+                if (bmargin > -540 * 3) {
+                    bmargin -= 540;
+                    $("#bottom-sec-div").animate(
+                            {"margin-left": bmargin.toString() + "px"}, 200, "linear"
+                    );
+                }
+            });
+            $("#left-arrow").click(function() {
+                if (bmargin < 0) {
+                    bmargin += 540;
+                    $("#bottom-sec-div").animate(
+                            {"margin-left": bmargin.toString() + "px"}, 200, "linear"
+                    );
+                }
+            });
+            var iheight = window.innerHeight * 0.64 + "px";
+            $("#poi-full").click(function() {
+                $("#full").css("visibility", "visible");
+                $("#chart-poi-l").css("height", iheight);
+                $("#chart-poi-l").css("visibility", "visible");
+                $("#cvs-l").css("visibility", "hidden");
+                $("#cvs-l").css("height", "0px");
+            });
+            $("#hour-full").click(function() {
+                $("#full").css("visibility", "visible");
+                $("#chart-poi-l").css("height", "0px");
+                $("#chart-poi-l").css("visibility", "hidden");
+                $("#cvs-l").css("visibility", "visible");
+                $("#cvs-l").css("height", iheight);
+            });
+            $("#cross").click(function() {
+                $("#chart-poi-l").css("height", "0px");
+                $("#cvs-l").css("height", "0px");
+                $("#full").css("visibility", "hidden");
+                $("#chart-poi-l").css("visibility", "hidden");
+                $("#cvs-l").css("visibility", "hidden");
+            });
+        });
+    </script>
+</body>
+</html>

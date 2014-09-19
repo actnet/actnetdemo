@@ -1,0 +1,2 @@
+/usr/bin/ar cr libactivitydata.a  CMakeFiles/activitydata.dir/activitydata.cpp.o
+/usr/bin/ranlib libactivitydata.a

@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11    CMakeFiles/weiboimporter.dir/weiboimporter.cpp.o  -o ../weiboimporter -rdynamic ../saedb/storage/libmgraph.a ../saedb/storage/libmmap_file.a 

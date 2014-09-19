@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>关于我们</title>
+    <script type="text/javascript" language="javascript">
+        function test_item(n){
+            var menu = document.getElementById("menu");
+            var menuli = menu.getElementsByTagName("li");
+            for(var i = 0; i<menuli.length; i++){
+                menuli[i].className= "";
+                menuli[n].className="hover";
+                document.getElementById("opt"+ i).className = "hide";
+                document.getElementById("opt"+ n).className = "show";
+            }
+        }
+    </script>
+    <link href="/css/activity.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="/js/search.js" charset="UTF-8"></script>
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div id="nav">
+                <div class="home"><a href="/home.html"><img src="/images/home.gif"></a></div>
+                <div class="search-box">
+                    <form method="get" id="search" action="">
+                        <input type="text" placeholder="要搜索的活动……" id="input-box">
+                        <input type="submit" id="search-button" value="">
+                    </form>
+                </div>
+                <span class="share">
+                    <span>分享到：</span>
+                    <input type="button" class="share_sina" value="">
+                    <input type="button" class="share_tencent" value="">
+                </span>
+            </div>
+        </div>
+    </header>
+	<!--end of header-->
+		<div class="title"><p>团队介绍</p>
+	</div>
+	<div class="opt">
+		<ul id="menu">
+			<li onclick="javascript:test_item(0);" class="hover">关于我们</li>
+			<li onclick="javascript:test_item(1);">荣誉奖项</li>
+		</ul>
+	</div>
+	<!--end of opt-->
+	<div class="opt_content">
+		<div class="show" id="opt0">
+			<div class="keg_inf">
+			<span  class="keg_icon"/>
+			<span class="keg_text">
+				清华大学计算机系知识工程研究室研究方向包括：语义Web、Web服务、数据挖掘、无线传感网、XML数据处理、软件生产
+线、网构软件，已经在WWW、SIGMOD、ACL、SIGIR、ISWC、ICWS、TKDE等计算机领域国际重要的会议与期刊上发表了学术论
+文，承担着国家自然科学基金、国家科技部973、863等科研项目的研究工作。此外，知识工程研究室将研究成果进行应用，
+是国内最早将Java技术与XML技术应用到电子商务与电子政务应用中的单位，承担多项国际合作和国家部委级项目。
+			</span>
+			</div>
+			<div class="huawei_inf">
+			<span  class="huawei_icon"/>
+			<span class="huawei_text">
+				The Noah’s Ark Lab was founded in Hong Kong in 2012. Our basic mission is to conduct state-of-the-art research in data mining and artificial intelligence by exploring theories and building intelligent systems. Our goal is to push the frontier of our understanding on how knowledge can be learned and intelligence can be realized from the Big Data. We are the first large-scale industrial research lab in Hong Kong, and we aim to attract the best talents from the world. Our interests include natural language understanding and information retrieval, large-scale data mining and machine learning, social media and mobile intelligence, human-computer interaction and systems, as well as machine learning theory.
+			</span>
+			</div>
+			<!--end of keg_inf-->
+			<ul class="keg_spot">
+					<li>
+					<img src="/images/团队介绍_03.gif"/>
+					<p>
+					Internet作为信息基础设施之一，已经深入
+到人类社会的各个领域，而world wide web
+（WWW）在Internet之上为人们提供了一个广
+泛进行各种数据和信息共享及利用的空间。</p>
+					
+					</li>
+					<li>
+					<img src="/images/团队介绍_04.gif"/>
+					<p>
+					我们是一只富有激情的创新团队。我们将通过
+情感的表达把用户和产品很自然的连接在一起。	</p>
+					</li>
+					<li>
+					<img src="/images/团队介绍_05.gif"/>
+					<p>
+					
+Web技术已经成为现在信息技术的一个重要领
+域，并在国民经济建设中发挥着巨大的作用。	</p>
+					</li>
+			</ul>			
+		</div>
+		<div class="hide" id="opt1">
+		<ul class="honor">
+			<li><img src="/images/honor_03.gif"/></li>
+			<li><img src="/images/honor_04.gif"/></li>
+			<li><img src="/images/honor_05.gif"/></li>
+			<li><img src="/images/honor_06.gif"/></li>
+		</ul>
+		</div>
+	</div>
+	<div id="layer0">
+	<div id="contact">
+		<div id="logo"></div>
+		<div id="logo_text"></div>
+		<div id="contact_us">
+			<p id="p1">Contact us</p>
+			<p id="local">北京海淀区五道口清华大学FIT楼1-308室</p>
+			<p id="tel"> +8610-62788788-20 </p>
+            <p id="email"><a href="mailto:debingliu@mail.tsinghua.edu.cn">debingliu@mail.tsinghua.edu.cn</a></p>
+		</div>
+	</div>
+	</div>                        
+	<div id="bottom">Copyright © 2006-2014 KEG, Tsinghua. All Rights Reserved. ICP NUM. 9068414</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>首页</title>
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery-2.1.1.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/js/actnet.js" charset="UTF-8"></script>
+</head>
+
+<body>
+	<div id="home_top">
+		<div id="wrap_top">
+            <div class="home">
+                <a href="/home.html"><img src="/images/logo.png"></a>
+                <span>Activity <a class="c">N</a>et</span>
+            </div>
+            <div class="util_button">
+                <input type="button" value="团队" onclick="location.href='about.html';">
+                <input type="button" value="帮助" onclick="location.href='help.html';">
+            </div>
+		</div>
+	</div>
+	<div id="home_search">
+		<div id="wrap_search">
+		<p id="slogan">微博中探寻生活的足迹</p>
+		<div id="search_b">
+			<form action="/" method="get" id="acty_serach" >
+                <input type="text" id="input_text" />
+                <input type="submit" id="home_submit"/>
+			</form>
+		</div>
+		<div id="hot_act">热门活动:
+		<span>
+		<a href="/activity/偶遇"> 偶遇</a><a href="/activity/回家"> 回家</a>
+		<a href="/activity/游泳"> 游泳</a><a href="/activity/健身"> 健身</a>
+		<a href="/activity/开会"> 开会</a><a href="/activity/打电话"> 打电话</a></span></div>
+		<div id="new_act">最新活动:
+		<span>
+		<a href="/activity/买鞋"> 买鞋</a><a href="/activity/抢小米"> 抢小米</a>
+		<a href="/activity/去鼓浪屿"> 去鼓浪屿</a><a href="/activity/逛超市"> 逛超市</a>
+		<a href="/activity/跑步"> 跑步</a>
+		</span></div>
+		<div id="dur_act">长期活动:
+		<span>
+		<a href="/activity/放假"> 放假</a><a href="/activity/聊天"> 聊天</a>
+		<a href="/activity/拍照"> 拍照</a><a href="/activity/吃火锅"> 吃火锅</a>
+		<a href="/activity/演出"> 演出</a>
+		</span></div>
+		<div id="new0">NEW:
+		<span>
+		<a href="/activity/去青海"> 去青海</a><a href="/activity/游西藏"> 游西藏</a>
+		<a href="/activity/上夜班"> 上夜班</a>
+		</span></div>
+		<div id="new1">NEW:
+		<span>
+		<a href="/activity/吃烤鸭"> 吃烤鸭</a><a href="/activity/798"> 798</a>
+		<a href="/activity/上厕所"> 上厕所</a>
+		</span></div>
+		</div>
+	</div>
+	<div id="home_act">
+		<div id="wrap_act">
+			<div id="wave_top"></div>
+			<ul class="u1">
+				<li id="a1"><a href="/activity/滑雪">滑雪</a></li>
+				<li id="a2"><a href="/activity/充话费">充话费</a></li>
+				<li id="a3"><a href="/activity/坐游轮">坐游轮</a></li>
+				<li id="a4"><a href="/activity/坐车">坐车</a></li>
+				<li id="a5"><a href="/activity/彩绘">彩绘</a></li>
+			</ul>
+			<ul class="u2">
+				<li id="b1"><a href="/activity/拍摄">拍摄</a></li>
+				<li id="b2"><a href="/activity/运动">运动</a></li>
+				<li id="b3"><a href="/activity/鬼节">鬼节</a></li>
+				<li id="b4"><a href="/activity/吃大餐">吃大餐</a></li>
+				<li id="b5"><a href="/activity/装修">装修</a></li>
+			</ul>
+			<div id="wave_bottom"></div>
+		
+		</div>
+	
+	</div>
+	<div id="home_city">
+		<div id="c1">
+			<div class="pic"></div>
+			<div class="h">上海</div>
+			<div class="text">小笼包 三杯鸡 滑冰 游泳 雕塑</div>
+			<div class="text">过年 鬼节 画画 化妆 逛外滩</div>
+		</div>
+		<div id="c2">
+			<div class="pic"></div>
+			<div class="h">北京</div>
+			<div class="text">烤鸭 乾隆 故宫 摔跤 咏春拳 武术</div>
+			<div class="text">春节 节日 美术 电影 逛天安门</div>
+		</div>
+		<div id="c3">
+			<p>更多城市</p>
+			<ul>
+				<li>天津</li>
+				<li>满洲里</li>
+				<li>青岛</li>
+			</ul>
+			<ul>
+				<li>西安</li>
+				<li>巴黎</li>
+				<li>四川</li>
+			</ul>
+			<ul>
+				<li>丹东</li>
+				<li>西藏</li>
+				<li>龙口</li>
+			</ul>
+		</div>
+	</div>             
+	<div id="bottom_count">visit</div>         
+	<div id="bottom">Copyright © 2006-2014 KEG, Tsinghua. All Rights Reserved. ICP NUM. 9068414</div>
+    <script>
+        $(document).ready(function () {
+        	getVisitCount();
+            $("#acty_serach").submit(function() {
+                act = $("#input_text").val();
+                if (act !== "") {
+                    window.location = "/activity/" + encodeURIComponent(act);
+                    return false;
+                } else {
+                    return false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+/usr/bin/ar cr libaminerdata.a  CMakeFiles/aminerdata.dir/aminerdata.cpp.o
+/usr/bin/ranlib libaminerdata.a

@@ -1,0 +1,270 @@
+body {
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+#header {
+    height: 40px;
+    background-color: #222222;
+}
+
+#nav {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.home {
+    width: 320px;
+    float: left;
+    border: 0;
+}
+
+.home img {
+    cursor: pointer;
+    border: 0;
+}
+
+.home span {
+    color: #ffffff;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 7px;
+    font-family: arial, verdana, sans-serif;
+}
+
+.c {
+   color: #ff8400;
+}
+
+.search-box {
+    float: left;
+    width: 400px;
+    margin-left: 200px;
+    border: 0;
+}
+
+#input-box {
+    float: left;
+    margin-top: 7px;
+    width: 339px;
+    height: 23px;
+    line-height: 24px;
+    border: 0;
+    text-align: left;
+    font-size: 12px;
+}
+
+#search-button {
+    float: left;
+    margin-top: 7px;
+    background: url(images/search_bt.gif) no-repeat;
+    cursor: pointer;
+    height: 26px;
+    width: 45px;
+    border: 0;
+    font-size: 12px;
+}
+
+.share {
+    margin: 0;
+    padding: 0;
+    color: #999999;
+    float: right;
+    left: 850px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    border: 0;
+}
+
+.share span {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    border: 0;
+}
+.share .share_sina {
+    float: left;
+    margin-top: 7px;
+    width: 20px;
+    height: 24px;
+    background: url(images/sina.gif) no-repeat;
+    cursor: pointer;
+    border: 0;
+}
+.share .share_tencent {
+    float: left;
+    margin-top: 7px;
+    margin-left: 5px;
+    width: 20px;
+    height: 24px;
+    background: url(images/tencent.gif) no-repeat;
+    border: 0;
+    cursor: pointer;
+}
+/*end of header*/
+
+.content{
+	margin:0 auto;
+	width:1080px;
+	height:440px;
+	color:#8e8e8e;
+	}
+.title{height:129px;text-align:center;line-height:129px;border-bottom:1px solid #e1e1e1;color:#848181;background:#f5f5f5;font-size:36px;}
+.title p{margin:0px;font-family:"微软雅黑";}
+.content .title1{color:black;font-weight:bold}
+.content .title2{font-weight:bold}
+.content .prgph{text-indent:2em}
+.opt{padding:50px 0 0 0;}
+
+.opt_content{margin:29px auto;width:1200px;border-top:1px solid #d6d6d6;}
+
+
+.opt ul{margin:0 auto;width:400px;
+	}
+.opt li { 
+	cursor:pointer;
+	float:left;
+	list-style:none;
+	margin:0 10px;
+	width:170px;
+	border:1px solid #d6d6d6;
+	line-height:29px;
+	text-align:center;
+	font-size:11px;
+	color:#fff;
+	background:#5e5e5e;
+	height:29px;
+	}
+.opt li.hover{
+	color:#000;
+	background:#fff;
+	border-left:1px solid #d6d6d6;
+	border-top:1px solid #d6d6d6;
+	border-right:1px solid #d6d6d6;
+	border-bottom:none;
+	}
+
+.show {
+	margin-top:0px;
+	height:600px;
+	clear:both; 
+	}
+.hide { display:none;}
+.keg_inf{
+	margin:60px auto;
+	width:900px;
+	height:120px;
+	border:1px solid #ededed;
+	background-color:#fafafa;
+	font-size:14px;
+	text-indent:2em;
+
+	}
+.keg_icon{
+position:absolute;
+left:230px;
+top:320px;
+background:url(images/icon_03.gif) no-repeat;
+padding:5px 5px;
+height:110px;
+width:110px;
+}
+.keg_text{
+position:absolute;
+top:-2px;
+left:120px;
+width:750px;
+line-height:1.5;
+}
+.huawei_inf{
+	margin:60px auto;
+	width:900px;
+	height:130px;
+	border:1px solid #ededed;
+	background-color:#fafafa;
+	font-size:14px;
+	text-indent:2em;
+
+	}
+.huawei_icon{
+position:absolute;
+left:230px;
+top:500px;
+background:url(images/huawei-logo.png) no-repeat;
+background-size:90%;
+padding:5px 5px;
+height:110px;
+width:110px;
+}
+.huawei_text{
+position:absolute;
+top:-2px;
+left:120px;
+width:750px;
+line-height:1.5;
+}
+.keg_spot {
+	margin:0 auto;
+	padding:0;
+	width:1000px;
+	list-style:none;
+	height:350px;
+	}
+.keg_spot li{
+	margin:0;
+	padding:0;
+    float:left;
+	width:330px;
+	height:350px;
+	background:url(images/sep_line_03.gif) no-repeat right top;
+	}
+.keg_spot li img{
+	float:right;}
+.keg_spot li p{
+		text-indent:2em;
+		padding:10px 5px;
+		line-height:2;
+		font-size:14px;
+		}
+	
+.honor {margin:100px auto;
+		list-style:none;
+		width:1000px;
+		}
+.honor li{
+		margin:0;
+		width:220px;
+		float:left;}
+		
+#layer0{margin:10 auto;background-color:#232323;height:190px;}
+#contact{width:1080px;margin:0 auto;position:relative;}
+#contact #logo{border:0;position:absolute;left:120px;top:30px;background:url(images/logo.gif);height:70px;width:154px;}
+#contact #logo_text{border:0;position:absolute;left:120px;top:100px;background:url(images/logo_down.gif) no-repeat;height:70px;width:154px;}
+#contact #contact_us{position:absolute;top:30px;left:400px;color:white;font-family:Arial, Helvetica, sans-serif;}
+#contact #contact_us p{padding:0;margin:5px 0;font-weight:bold;}
+#contact #contact_us #p1{font-size:22px;padding-bottom:10px;}
+#contact #contact_us #local{background:url(images/local.gif) no-repeat left;font-size:22px;font-family:"微软雅黑";color:#a9a9a9;margin-left:-4px;text-indent:24px;}
+#contact #contact_us #tel{font-size:22px;}
+#contact #contact_us #email{margin-top:-5px;color:#e47805;font-size:22px;}
+
+#contact #contact_us #email a {
+    color: inherit;
+}
+
+
+#bottom {
+	height:48px;
+	background-color: #545a5e;
+	color:#fff;
+	text-align:center;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	line-height:48px;
+}
+
+

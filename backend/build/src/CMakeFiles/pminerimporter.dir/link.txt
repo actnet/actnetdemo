@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11    CMakeFiles/pminerimporter.dir/pminerimporter.cpp.o  -o ../pminerimporter -rdynamic ../saedb/storage/libmgraph.a ../saedb/storage/libmmap_file.a 

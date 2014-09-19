@@ -1,0 +1,483 @@
+body {
+    margin: 0 0 0 0;
+}
+
+div.util_button {
+    float: right;
+    margin-top: 7px;
+}
+
+div.util_button input {
+    border: 1px solid #ff8400;
+    width: 64px;
+    height: 25px;
+    color: #ffffff;
+    background-color: #222222;
+}
+
+section.main-sec {
+    background-color: #ededed;
+    height: 550px;
+}
+
+div.map {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+div.left-side-bar {
+    width: 134px;
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+div.left-side-bar ul {
+    float: left;
+    padding-left: 0;
+    margin-top: -5px;
+}
+
+div.left-side-bar li {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+div.left-side-bar input {
+    background-color: #54595e;
+    border: 0 none;
+    width: 65px;
+    height: 40px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+div.right-side-bar {
+    position: absolute;
+    width: 130px;
+    height: 480px;
+    margin: 0;
+    padding: 0;
+    background-color: #585e63;
+}
+
+div.right-side-bar ul {
+    margin-top: 0;
+    padding-left: 0;
+}
+
+div.right-side-bar li {
+    display: inline-block;
+}
+
+div.right-side-bar input {
+    width: 130px;
+    height: 25px;
+    background-color: #585e63;
+    border: 0 none;
+    color: #ffffff;;
+}
+
+div.right-side-bar input.head {
+    background-color: #333333;
+    border-bottom: 1px solid #444444;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+div.side-bar {
+    width: 134px;
+}
+
+div.center-map {
+    margin-top: -40px;
+    overflow: hidden;
+    padding: 0;
+    background-color: #afafaf;
+    width: 950px;
+    height: 520px;
+    float: right;
+}
+
+div.center-map-inner {
+    width: 950px;
+    height: 520px;
+}
+
+div.shadow {
+    margin-left: 75px;
+    width: 902px;
+}
+
+div.shadow img {
+    width: 100%;
+}
+
+section.bottom-sec {
+    background-color: #ededed;
+    padding-top: 0;
+    padding-bottom: 20px;
+    font-size: 12px;
+}
+
+div#chart-poi-div {
+    padding: 0;
+    width: 538px;
+    height: 294px;
+    float: left;
+    background-color: #dfdfdf;
+    border-right: 2px solid #909090;
+}
+
+div#chart-hour-div {
+    padding: 0;
+    width: 538px;
+    height: 294px;
+    background-color: #dfdfdf;
+    float: left;
+    border-right: 2px solid #909090;
+}
+
+div#chart-emotion-div {
+    margin: 0 auto;
+    padding: 0;
+    width: 500px;
+    height: 400px;
+}
+
+div#sub-acts {
+    padding: 30px 0 0 40px;
+    width: 498px;
+    height: 264px;
+    font-size: 12px;
+    font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文细黑", "STHeiti", "MingLiu";
+    background-color: #dfdfdf;
+    float: left;
+    border-right: 2px solid #909090;
+}
+
+div#related-user {
+    padding: 30px 0 0 40px;
+    width: 498px;
+    height: 264px;
+    font-size: 12px;
+    font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文细黑", "STHeiti", "MingLiu";
+    background-color: #dfdfdf;
+    float: left;
+    border-right: 2px solid #909090;
+}
+
+ul#related-user-ul>li>div.user-info {
+    width: 210px;
+    height: 50px;
+}
+
+div.next-act-info {
+    width: 210px;
+    height: 50px;
+}
+
+div.next-act-info-right {
+    margin-top: -210px;
+    margin-left: 210px;
+}
+
+ul#related-user-ul {
+    padding: 0;
+    margin-top: 20px;
+    display: inline;
+    list-style: none;
+    float: left;
+    position: absolute;
+}
+
+ul#sub-acts-box-ul {
+    padding: 0;
+    margin-top: 20px;
+    list-style: none;
+    float: left;
+    position: absolute;
+}
+
+ul#sub-acts-box-ul>li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    visibility: hidden;
+}
+
+ul#sub-acts-box-ul-right {
+    padding: 0;
+    margin-top: 20px;
+    list-style: none;
+    float: right;
+}
+
+ul#sub-acts-box-ul-right>li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    visibility: hidden;
+}
+
+ul#next-act-ul {
+    padding: 0;
+    margin-top: 20px;
+    display: inline;
+    list-style: none;
+    float: left;
+    position: absolute;
+}
+
+ul#related-user-ul-right {
+    padding: 0;
+    margin-top: 20px;
+    display: inline;
+    list-style: none;
+    float: right;
+}
+
+ul#next-act-ul-right {
+    padding: 0;
+    margin-top: 20px;
+    display: inline;
+    list-style: none;
+    float: right;
+}
+
+ul#next-act-ul>li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+ul#next-act-ul-right>li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+ul#related-user-ul>li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+ul#related-user-ul-right>li {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+ul#related-user-ul-right>li>div.user-info {
+    width: 210px;
+    height: 50px;
+}
+
+div.related-user-title {
+    font-size: 18px;
+    color: #2c5faa;
+}
+
+div.next-act-title {
+    font-size: 18px;
+    color: #2c5faa;
+}
+
+div.portrait {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    float: left;
+}
+
+div.name {
+    float: right;
+    width: 148px;
+}
+
+div.users-box-div {
+    display: inline-block;
+    width: 460px;
+}
+
+div.next-act-box-div {
+    display: inline-block;
+    width: 460px;
+}
+
+div#next-act {
+    padding: 30px 0 0 40px;
+    width: 500px;
+    height: 264px;
+    font-size: 12px;
+    font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文细黑", "STHeiti", "MingLiu";
+    background-color: #dfdfdf;
+    float: left;
+}
+
+span.next-act-name {
+    font-size: 18px;
+    position: absolute;
+    float: left;
+}
+
+span.sub-act-name {
+    font-size: 18px;
+    position: absolute;
+    float: left;
+    margin-top: 12px;
+}
+
+span.sub-act-name>a {
+    color: #3A79B8;
+    text-decoration: none;
+}
+
+span.next-act-name>a {
+    color: #3A79B8;
+    text-decoration: none;
+}
+
+span.next-act-num {
+    font-size: 18px;
+    margin-left: 6em;
+    color: #303030;
+    padding-top: 12px;
+}
+
+div.next-act-info-det {
+    color: #303030;
+    float: right;
+    margin-top: 24px;
+}
+
+div#bottom-sec-div {
+    width: 2700px;
+    height: 294px;
+}
+
+div.fixed-bottom {
+    width: 1080px;
+    height: 294px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+div.right-arrow {
+    position: absolute;
+    left: 1045px;
+    bottom: 120px;
+}
+
+div.left-arrow {
+    position: absolute;
+    left: 0px;
+    bottom: 120px;
+}
+
+img.emoji-icon {
+    width: 32px;
+    height: 32px;
+}
+
+span.big-slash {
+    font-size: 24px;
+}
+
+span.neg-percent {
+    font-size: 14px;
+}
+
+span.pos-percent {
+    font-size: 14px;
+}
+
+span#poi-title {
+    position: absolute;
+    margin-top: -266px;
+    padding-left: 428px;
+    font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文细黑", "STHeiti", "MingLiu";
+    font-size: 18px;
+    color: #2c5faa;
+}
+
+span#hour-title {
+    position: absolute;
+    margin-top: -266px;
+    padding-left: 428px;
+    font-family: "Microsoft YaHei", "微软雅黑", "Microsoft JhengHei", "华文细黑", "STHeiti", "MingLiu";
+    font-size: 18px;
+    color: #2c5faa;
+}
+
+div.ind {
+    opacity: 0.6;
+    background-color: #000000;
+    filter: alpha(opactiy=40); /* For IE8 */
+    width: 100%;
+    height: 957px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+div.render-box {
+    background-color: #d0d0d0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 28% 0 0 14%;
+    padding: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 16px 0 16px 0;
+    text-align: center;
+    height: 16px;
+    background-color: #222222;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+footer>span {
+    margin: 0;
+    padding: 0;
+}
+
+div#poi-full {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    margin-top: -296px;
+    padding-left: 508px;
+}
+
+div#hour-full {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    margin-top: -298px;
+    padding-left: 508px;
+}
+
+div#cross {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    margin-left: calc(100% - 32px);
+    float: right;
+}
+
+svg#chart-poi-l {
+    margin-top: 20px;
+    position: absolute;
+}
+
+canvas#cvs-l {
+    margin-top: 5px;
+    position: absolute;
+}

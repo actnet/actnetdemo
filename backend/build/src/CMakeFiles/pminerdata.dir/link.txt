@@ -1,0 +1,2 @@
+/usr/bin/ar cr libpminerdata.a  CMakeFiles/pminerdata.dir/pminerdata.cpp.o
+/usr/bin/ranlib libpminerdata.a
